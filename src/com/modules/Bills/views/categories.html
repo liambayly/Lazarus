@@ -1,0 +1,263 @@
+<span breadcrumb='standard'></span>
+
+
+      
+<div class="container">
+    <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" ng-class="{active: checkTab('category')}">
+        <a href="#category" aria-controls="category" role="tab" data-toggle="tab">Main Categories</a>
+    </li>
+    <li role="presentation" ng-class="{active: checkTab('subcategory')}">
+        <a href="#subcategory" aria-controls="subcategory" role="tab" data-toggle="tab">Sub Categories</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade" ng-class="{'in active': checkTab('category')}" id="category">
+            <div class="row">
+                <div class="col-md-14" align="left"> 
+                    <h4>CATEGORIES</h4>
+                </div>
+            <div class="row">
+                <div class="col-md-4" align="left"> 
+                    <input type="text" id="category" class="form-control" placeholder="Add Category" ng-model="category" required autofocus><br>
+                    <button class="btn btn-lg btn-primary btn-block">Add Category</button>
+                    <br><BR>
+                </div>
+            </div>
+                <div class="col-md-3" align="left"> 
+                    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+                        
+        <tfoot>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+            <tr>
+                <td>Taxes</td>
+                <td><div align="center"><a href="#editModal"  data-toggle="modal"><i class="fa fa-pencil-square fa-lg"></i></a></div></td>
+                <td><div align="center"><a href="#deleteModal" data-toggle="modal"><i class="fa fa-minus-square fa-lg"></i></a></div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+            <tr>
+                <td>Defense</td>
+                <td><div align="center"><a href="#editModal"  data-toggle="modal"><i class="fa fa-pencil-square fa-lg"></i></a></div></td>
+                <td><div align="center"><a href="#deleteModal" data-toggle="modal"><i class="fa fa-minus-square fa-lg"></i></a></div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td><div align="center"><a href="#editModal"  data-toggle="modal"><i class="fa fa-pencil-square fa-lg"></i></a></div></td>
+                <td><div align="center"><a href="#deleteModal" data-toggle="modal"><i class="fa fa-minus-square fa-lg"></i></a></div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+        </tbody>
+    </table>
+                </div>
+                <div class="col-md-14" align="left"> 
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div role="tabpanel" class="tab-pane fade" ng-class="{'in active': checkTab('subcategory')}" id="subcategory">
+            <div class="row">
+                <div class="col-md-14" align="left"> 
+                    <h4>SUB CATEGORIES</h4>
+                </div>
+                <div class="row">
+                <div class="col-md-4" align="left"> 
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Current Selection: Taxes
+                      <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <li><a href="">Taxes</a></li>
+                        <li><a href="">Education</a></li>
+                        <li><a href="">Defense</a></li>
+                      </ul>
+                    </div>
+                    <BR>
+                    <input type="text" id="category" class="form-control" placeholder="Add Sub Category to Taxes" ng-model="category" required autofocus><br>
+                    <button class="btn btn-lg btn-primary btn-block">Add Sub Category to Taxes</button>
+                    <br><BR>
+                </div>
+            </div>
+                <div class="col-md-3" align="left"> 
+                    <h4>Current View: Taxes</h4>
+                    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>SubCategory</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+                        
+        <tfoot>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+            <tr>
+                <td>Taxes</td>
+                <td>Raise Taxes</td>
+                <td><div align="center"><a href="#editSubModal"  data-toggle="modal"><i class="fa fa-pencil-square fa-lg"></i></a></div></td>
+                <td><div align="center"><a href="#deleteSubModal" data-toggle="modal"><i class="fa fa-minus-square fa-lg"></i></a></div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+            <tr>
+                <td>Taxes</td>
+                <td>Lower Taxes</td>
+                <td><div align="center"><a href="#editSubModal"  data-toggle="modal"><i class="fa fa-pencil-square fa-lg"></i></a></div></td>
+                <td><div align="center"><a href="#deleteSubModal" data-toggle="modal"><i class="fa fa-minus-square fa-lg"></i></a></div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+            <tr>
+                <td>Taxes</td>
+                <td>New Taxes</td>
+                <td><div align="center"><a href="#editSubModal"  data-toggle="modal"><i class="fa fa-pencil-square fa-lg"></i></a></div></td>
+                <td><div align="center"><a href="#deleteSubModal" data-toggle="modal"><i class="fa fa-minus-square fa-lg"></i></a></div></td>
+            </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
+        </tbody>
+    </table>
+                </div>
+                <div class="col-md-14" align="left"> 
+                    
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+</div>
+    <script language="JavaScript">
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
+      <!--DELETE MODAL-->
+    <div id="deleteModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Delete Category</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete the category taxes?</p>
+                <p class="text-warning"><small>THis will automatically delete all sub categories for this category.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+      <!--END DELETE MODAL-->
+      <!--EDIT MODAL-->
+<div id="editModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Edit Category</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                <div class="col-md-4" align="left"> 
+                    <input type="text" id="editcategory" class="form-control" placeholder="Taxes" ng-model="editcategory" required autofocus value="Taxes"><br>
+                    <br><BR>
+                </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Update Category</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END EDIT MODAL-->
+    
+<!--DELETE MODAL-->
+    <div id="deleteSubModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Delete Sub Category for Taxes</h4>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete the Sub category Taxes: Raise Taxes?</p>
+                <p class="text-warning"><small>You Cannot Reverse this action.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Delete Raise Taxes</button>
+            </div>
+        </div>
+    </div>
+</div>
+      <!--END DELETE MODAL-->
+      <!--EDIT MODAL-->
+<div id="editSubModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Edit Sub Category For Taxes</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                <div class="col-md-4" align="left"> 
+                    <input type="text" id="editcategory" class="form-control" placeholder="Raise Taxes" ng-model="editcategory" required autofocus value="Raise Taxes"><br>
+                    <br><BR>
+                </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Update Taxes: Raise Taxes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END EDIT MODAL-->
